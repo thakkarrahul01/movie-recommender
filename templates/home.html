@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title>Movie Recommender</title>
+</head>
+
+<body>
+    {% extends "template.html" %} {% block content %}
+
+    <h1> CSDA 1040 - Group 4 </h1>
+    <p> -Soyuz, Rotchelle, Elna, Rahul </p>
+
+    <h2> Recommend movies similar to - Grumpier Old Men (1995) </h2>
+
+    <div class="login">
+        <!-- Main Input For Receiving Query to our ML -->
+        <form action="{{ url_for('predict')}}" method="POST">
+            <!--<input type="text" name="movieinput" placeholder="Which movie do you like?" /> -->
+            <button type="submit" class="btn btn-primary btn-block btn-large">Recommend</button>
+        </form>
+
+        <br>
+        <br> {{ prediction_text }}
+    </div>
+    {% endblock %}
+</body>
+
+</html>
