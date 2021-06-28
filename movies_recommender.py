@@ -64,7 +64,7 @@ def genre_recommendations(title):
     return titles.iloc[movie_indices]
 
 #recomm = genre_recommendations('Good Will Hunting (1997)')
-recomm = genre_recommendations('Grumpier Old Men (1995)')
+recomm = genre_recommendations('Othello (1995)')
 
 pickle.dump(recomm,open('model.pkl','wb'))
 
@@ -74,5 +74,3 @@ model=pickle.load(open('model.pkl','rb'))
 #recomm = model.load(model)
 
 #recomm1 = model.genre_recommendation('Good Will Hunting (1997)')
-
-#print(recomm1)
